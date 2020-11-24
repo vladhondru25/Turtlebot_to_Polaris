@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="turtlebot_controller" type="controller.py" name="controller" output="screen"/>
+
+</launch>
