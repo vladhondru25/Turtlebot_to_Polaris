@@ -1,3 +1,7 @@
 catkin_ws/build/
 catkin_ws/devel/
 catkin_ws/src/.vscode/
+catkin_ws/src/turtlebot_controller/scripts/controller.pyc
+catkin_ws/src/turtlebot_controller/scripts/pid.pyc
+catkin_ws/src/turtlebot_controller/scripts/subscribers.pyc
+catkin_ws/src/turtlebot_controller/scripts/utilities.pyc
