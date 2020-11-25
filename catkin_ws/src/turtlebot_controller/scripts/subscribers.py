@@ -6,7 +6,9 @@ from geometry_msgs.msg import Quaternion
 
 class Subscriber:
     def __init__(self, controller):
+        # Define the subscriber to the IMU data
         rospy.Subscriber('/imu',  Imu, self.imuCallback)
+        # Define the subscriber to the odom data
         rospy.Subscriber('/odom', Odometry, self.odomCallback)
 
         # Get the instance of controller

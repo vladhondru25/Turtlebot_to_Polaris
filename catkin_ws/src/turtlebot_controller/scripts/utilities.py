@@ -4,6 +4,7 @@ from geometry_msgs.msg import Twist
 
 
 # Taken from ros-teleop/telep_twist_keyboard package
+# Read the terminal for keyboard inputs
 def getKey(key_timeout, settings):
     tty.setraw(sys.stdin.fileno())
     rlist, _, _ = select.select([sys.stdin], [], [], key_timeout)
