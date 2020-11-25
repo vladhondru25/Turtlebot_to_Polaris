@@ -10,6 +10,7 @@ import sys, termios
 from subscribers import Subscriber
 from controller import Controller
 import utilities
+import tests
 
 
 if __name__ == '__main__':
@@ -31,6 +32,11 @@ if __name__ == '__main__':
 
             elif (input_key == ' '):
                 controller.toggle_mode()
+
+            elif (input_key == 't'):
+                tests.test1()
+            elif (input_key == 'y'):
+                tests.test2()
             
             else:
                 _, command = utilities.process_key(input_key)
