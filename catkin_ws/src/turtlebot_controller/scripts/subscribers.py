@@ -16,7 +16,7 @@ class Subscriber:
         pitch = euler_angles[1]
         yaw   = euler_angles[2]
 
-        print(euler_angles)
+        # print(euler_angles)
 
     def odomCallback(self, data):
         pass
