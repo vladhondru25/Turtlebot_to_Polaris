@@ -21,7 +21,7 @@ if __name__ == '__main__':
         rospy.init_node('turtlebot_node', anonymous=True)
         rate = rospy.Rate(20) # 10Hz
 
-        subscriber = Subscriber()
+        subscriber = Subscriber(controller)
 
         while not rospy.is_shutdown():
             input_key = utilities.getKey(0.5, settings)
@@ -38,12 +38,9 @@ if __name__ == '__main__':
 
             rate.sleep()
 
-        # rospy.spin()
-
-    except rospy.ROSInterruptException:
-        rospy.loginfo("Exception")
-        pass
+    except Exception as e:
+        print(e)
 
     finally:
-        termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
         controller.stop()
+        termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
